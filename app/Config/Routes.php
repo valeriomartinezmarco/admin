@@ -7,4 +7,6 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
+$routes->get('registroPropiedad', 'Home::registroCasa');
+
 service('auth')->routes($routes);

@@ -10,6 +10,12 @@ class Home extends BaseController
        return view('welcome_message');
     }
 
+    public function registroCasa(): string
+    {
+
+       return view('registroCasa');
+    }
+
   
 
 }
