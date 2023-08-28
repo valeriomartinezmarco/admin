@@ -229,6 +229,8 @@
 </header>
 
 <!-- CONTENT -->
+rtretretret
+<?php   auth()->logout();?>
 
 <section>
 
