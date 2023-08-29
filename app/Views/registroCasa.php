@@ -33,29 +33,150 @@ include_once "template/header.php";
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form id="quickForm">
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+              <form class="needs-validation" novalidate>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip01">Titulo Casa</label>
+                    <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+                    <div class="valid-tooltip">
+                      Looks good!
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  <div class="form-group mb-0">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
-                      <label class="custom-control-label" for="exampleCheck1">I agree to the <a href="#">terms of service</a>.</label>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip02">Tag Casa</label>
+                    <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
+                    <div class="valid-tooltip">
+                      Looks good!
                     </div>
                   </div>
                 </div>
-                <!-- /.card-body -->
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip01">Intro Casa</label>
+                    <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+                    <div class="valid-tooltip">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip02">Botón Casa Cel</label>
+                    <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
+                    <div class="valid-tooltip">
+                      Looks good!
+                    </div>
+                  </div>
                 </div>
+
+                
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip01">Titulo Desc Casa</label>
+                    <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+                    <div class="valid-tooltip">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip02">Desc Casa</label>
+                    <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
+                    <div class="valid-tooltip">
+                      Looks good!
+                    </div>
+                  </div>
+                </div>
+
+                
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip01">Desc Jardin</label>
+                    <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+                    <div class="valid-tooltip">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip02">Footer casa</label>
+                    <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
+                    <div class="valid-tooltip">
+                      Looks good!
+                    </div>
+                  </div>
+                </div>
+
+
+                
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip01">Info Casa</label>
+                    <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+                    <div class="valid-tooltip">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip02">Categoria casa Casa Cel</label>
+                    <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
+                    <div class="valid-tooltip">
+                      Looks good!
+                    </div>
+                  </div>
+                </div>  
+
+
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">City</label>
+                    <input type="text" class="form-control" id="validationTooltip03" required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationTooltip04">State</label>
+                    <select class="custom-select" id="validationTooltip04" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>...</option>
+                    </select>
+                    <div class="invalid-tooltip">
+                      Please select a valid state.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationTooltip05">Zip</label>
+                    <input type="text" class="form-control" id="validationTooltip05" required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid zip.
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
               </form>
-            </div>
+              <script>
+              // Example starter JavaScript for disabling form submissions if there are invalid fields
+              (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                  var forms = document.getElementsByClassName('needs-validation');
+                  // Loop over them and prevent submission
+                  var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                      if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                      }
+                      form.classList.add('was-validated');
+                    }, false);
+                  });
+                }, false);
+              })();
+              </script>
+
+
+
+
+                  </div>
             <!-- /.card -->
             </div>
           <!--/.col (left) -->
