@@ -1,6 +1,16 @@
 <?php
 include_once "template/header.php";
 ?>
+  <!-- summernote -->
+  <link rel="stylesheet" href="<?= base_url();?>/public/plugins/summernote/summernote-bs4.min.css">
+
+  <!-- CodeMirror -->
+  <link rel="stylesheet" href="<?= base_url();?>/public/plugins/codemirror/codemirror.css">
+  <link rel="stylesheet" href="<?= base_url();?>/public/plugins/codemirror/theme/monokai.css">
+  <!-- SimpleMDE -->
+  <link rel="stylesheet" href="<?= base_url();?>/public/plugins/simplemde/simplemde.min.css">
+
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -109,7 +119,17 @@ include_once "template/header.php";
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip01">Info Casa</label>
-                    <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+                    
+                    <!-- /.card-header -->
+            <div class="card-body">
+              <textarea id="summernote">
+                Place <em>some</em> <u>text</u> <strong>here</strong>
+              </textarea>
+            </div>
+            <div class="card-footer">
+              Visit <a href="https://github.com/summernote/summernote/">Summernote</a> documentation for more examples and information about the plugin.
+            </div>
+          </div>
                     <div class="valid-tooltip">
                       Looks good!
                     </div>
@@ -172,7 +192,18 @@ include_once "template/header.php";
                 }, false);
               })();
               </script>
+<script>
+  $(function () {
+    // Summernote
+    $('#summernote').summernote()
 
+    // CodeMirror
+    CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+      mode: "htmlmixed",
+      theme: "monokai"
+    });
+  })
+</script>
 
 
 
@@ -191,6 +222,17 @@ include_once "template/header.php";
     </section>
 
 </div>
+
+<!-- Summernote -->
+<script src="<?= base_url();?>/public/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- CodeMirror -->
+<script src="<?= base_url();?>/public/plugins/codemirror/codemirror.js"></script>
+<script src="<?= base_url();?>/public/plugins/codemirror/mode/css/css.js"></script>
+<script src="<?= base_url();?>/public/plugins/codemirror/mode/xml/xml.js"></script>
+<script src="<?= base_url();?>/public/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+
+
 <?php
 include_once "template/footer.php";
 ?>
