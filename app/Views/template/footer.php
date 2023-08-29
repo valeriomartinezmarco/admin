@@ -49,5 +49,13 @@
 <script src="<?= base_url();?>/public/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= base_url();?>/public/dist/js/pages/dashboard.js"></script>
+
+
+<!-- CodeMirror -->
+<script src="<?= base_url();?>/public/plugins/codemirror/codemirror.js"></script>
+<script src="<?= base_url();?>/public/plugins/codemirror/mode/css/css.js"></script>
+<script src="<?= base_url();?>/public/plugins/codemirror/mode/xml/xml.js"></script>
+<script src="<?= base_url();?>/public/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
 </body>
 </html>
