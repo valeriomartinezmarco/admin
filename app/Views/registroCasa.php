@@ -43,25 +43,31 @@ include_once "template/header.php";
               <div class="card-body p-0">
                 <div class="bs-stepper">
                   <div class="bs-stepper-header" role="tablist">
-                    <!-- your steps here -->
+                    
+                  <!-- your steps here -->
                     <div class="step" data-target="#logins-part">
                       <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger">
                         <span class="bs-stepper-circle">1</span>
                         <span class="bs-stepper-label">Logins</span>
                       </button>
                     </div>
-                    <div class="line"></div>
-                  <div class="line"></div>
-                    <div class="step" data-target="#information-part">
-                      <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+
+                    <div class="step" data-target="#aa-part">
+                      <button type="button" class="step-trigger" role="tab" aria-controls="aa-part" id="aa-part-trigger">
                         <span class="bs-stepper-circle">2</span>
-                        <span class="bs-stepper-label">Various information</span>
+                        <span class="bs-stepper-label">Logins</span>
                       </button>
                     </div>
-                  </div>
-
-
-
+                    
+                    <div class="line"></div>
+                      <div class="step" data-target="#information-part">
+                        <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+                          <span class="bs-stepper-circle">3</span>
+                          <span class="bs-stepper-label">Various information</span>
+                        </button>
+                      
+                      </div>
+                    </div>
                   <div class="bs-stepper-content">
                     <!-- your steps content here -->
                     <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
@@ -76,7 +82,21 @@ include_once "template/header.php";
                       <button class="btn btn-primary" onclick="stepper.next()">Next</button>
                     </div>
 
-                    
+
+                    <div id="aa-part" class="content" role="tabpanel" aria-labelledby="aa-part-trigger">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      </div>
+                      <button class="btn btn-primary" onclick="stepper.next()">Next</button>
+                    </div>
+
+
+
 
                     <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
                       <div class="form-group">
@@ -105,7 +125,7 @@ include_once "template/header.php";
             <!-- /.card -->
           </div>
         </div>
-      </div>
+        </div>
       <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
