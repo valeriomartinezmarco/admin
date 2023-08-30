@@ -51,6 +51,7 @@ include_once "template/header.php";
                       </button>
                     </div>
                     <div class="line"></div>
+                  <div class="line"></div>
                     <div class="step" data-target="#information-part">
                       <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
                         <span class="bs-stepper-circle">2</span>
@@ -58,6 +59,9 @@ include_once "template/header.php";
                       </button>
                     </div>
                   </div>
+
+
+
                   <div class="bs-stepper-content">
                     <!-- your steps content here -->
                     <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
@@ -71,6 +75,9 @@ include_once "template/header.php";
                       </div>
                       <button class="btn btn-primary" onclick="stepper.next()">Next</button>
                     </div>
+
+                    
+
                     <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
                       <div class="form-group">
                         <label for="exampleInputFile">File input</label>
